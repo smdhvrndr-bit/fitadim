@@ -56,6 +56,23 @@
     For more details:
     * https://docs.flutter.dev/platform-integration/web/initialization
   -->
-  <script src="flutter_bootstrap.js" async></script>
+  <script id="fitadim-update">
+    (function () {
+      var current = "20261115190637";
+      try {
+        fetch("surum.json?t=" + Date.now(), { cache: "no-store" })
+          .then(function (r) { return r.json(); })
+          .then(function (j) {
+            if (!j.build || j.build === current) return;
+            var key = "fitadim_reload_" + j.build;
+            if (sessionStorage.getItem(key)) return;
+            sessionStorage.setItem(key, "1");
+            location.replace(location.pathname + "?b=" + j.build);
+          })
+          .catch(function () {});
+      } catch (e) {}
+    })();
+  </script>
+  <script src="flutter_bootstrap.js?b=20261115190637" async></script>
 </body>
 </html>
