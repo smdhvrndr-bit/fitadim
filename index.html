@@ -19,7 +19,7 @@
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="FitAdım: kişiye özel antrenman, beslenme ve ilerleme takibi.">
-  <meta name="theme-color" content="#00897B">
+  <meta name="theme-color" content="#000000">
 
   <!--
     Uncomment the tag below to lay the app out underneath the parts of the
@@ -36,7 +36,7 @@
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="FitAdım">
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 
@@ -44,7 +44,7 @@
   <link rel="icon" type="image/png" href="favicon.png"/>
 
   <title>FitAdım</title>
-  <style>html, body { background: #F1F8F7; margin: 0; }</style>
+  <style>html, body { background: #000000; margin: 0; }</style>
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
@@ -58,7 +58,7 @@
   -->
   <script id="fitadim-update">
     (function () {
-      var current = "20261115190637";
+      var current = "20261115231002";
       try {
         fetch("surum.json?t=" + Date.now(), { cache: "no-store" })
           .then(function (r) { return r.json(); })
@@ -73,6 +73,8 @@
       } catch (e) {}
     })();
   </script>
-  <script src="flutter_bootstrap.js?b=20261115190637" async></script>
+  <!-- Paylaşım videoları ve kartları (cihazda üretilir) -->
+  <script src="fitadim_media.js?b=20261115231002"></script>
+  <script src="flutter_bootstrap.js?b=20261115231002" async></script>
 </body>
 </html>
